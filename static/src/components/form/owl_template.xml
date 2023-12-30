@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <templates >
-    <t t-name="nira_data_entry.owl_js_template" owl="1">
-            <body class="bg-body-tertiary d-flex flex-column">
-                <header style="height: 100px;">
+    <t t-name="nira_data_entry.parent" owl="1">
+          <body class="bg-body-tertiary d-flex flex-column">
+              <PageHeader/>
+              <FormCard/>
+          </body>
+    </t>
+
+    <t t-name="nira_data_entry.header">
+        <header style="height: 100px;">
                     <nav class="navbar bg-white border-bottom d-flex h-100">
                         <div class="flex-fill d-flex ms-5">
                             <img src="/nira_data_entry/static/images/image1.png" alt="Logo" width="75" height="75" class="ms-5 mt-1"/>
@@ -42,12 +48,14 @@
 
                     </nav>
                 </header>
+    </t>
 
-                <div class="card d-flex flex-row m-4 rounded-4">
+    <t t-name="nira_data_entry.card">
+        <div class="card d-flex flex-row m-4 rounded-4">
                     <div class="card-body ">
                         <div class="container w-75">
                             <div class="container-fluid d-flex justify-content-center mt-2">
-                                <p class="fw-bold h3">Registration of Persons Act, 2015.</p>
+                                <p class="fw-bold h2">Registration of Persons Act, 2015.</p>
                             </div>
                             <div class="container-fluid d-flex justify-content-center mt-2">
                                 <p class="fw-bold h4 ">FORM 3.</p>
@@ -110,6 +118,7 @@
                         </div>
                     </div>
                     <div class="mt-5 me-5 w-25">
+                        <p class="fs-5">Date: <span t-out="date"/></p>
                         <p class="text-danger fw-bold fs-4 mt-5 me-3">Please note</p>
                         <ul class="mt-1 me-3">
                             <li class="fs-5 me-3 mb-2">The National ID is issued free of charge the first time but a fee of <b>50000/=</b> is charged upon
@@ -120,6 +129,5 @@
                         </ul>
                     </div>
                 </div>
-            </body>
     </t>
 </templates>

@@ -3,13 +3,30 @@
 import { Component, mount, whenReady, xml } from '@odoo/owl'
 import { templates } from "@web/core/assets"
 
-class DataEntryFormComponent extends Component{
-
+// Header component
+class PageHeader extends Component {
+    static template = "nira_data_entry.header"
 }
 
-DataEntryFormComponent.template = 'nira_data_entry.owl_js_template'
+// Card component
+class FormCard extends Component {
+    static template = "nira_data_entry.card"
 
-//DataEntryFormComponent.template = xml`<div>Hurray, Problem solved</div>`
+    setup(){
+        this.date = new Date().toLocaleString()
+    }
+}
+
+// Parent component
+class DataEntryFormComponent extends Component{
+    setup(){
+    }
+}
+
+DataEntryFormComponent.template = 'nira_data_entry.parent'
+// Declare components
+DataEntryFormComponent.components = { PageHeader, FormCard }
+
 
 whenReady(()=>{
     const element_with_class_name = document.querySelector('.owl_template')
