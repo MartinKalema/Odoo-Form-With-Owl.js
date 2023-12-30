@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+nira_data_entry.access_nira_data_entry,access_nira_data_entry,nira_data_entry.model_nira_data_entry,base.group_user,1,1,1,1
