@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <template id="owl_form_template" name="owl_form">
+            <html>
+<!--                Assets should always be imported in the python xml file, else, owl functionality won't be available-->
+<!--                In Odoo16, owl is not included in the web.assets_backend and adding web assets in the manifest causes undesired effects-->
+                <head>
+                    <t t-call-assets="web.assets_backend"/>
+                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"/>
+                </head>
+                <div class="owl_template"/>
+            </html>
+        </template>
+    </data>
+</odoo>
+
